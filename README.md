@@ -7,6 +7,7 @@ We present Epi-PRS, a polygenic prediction method that leverages genomic large l
 - TensorFlow-hub == 0.11.0
 - Java JDK == 1.8.0
 - h5py == 3.6.0
+- pyfasta == 0.5.2
 
 # Installation
 Epi-PRS can be downloaded by
@@ -38,7 +39,20 @@ where `Per_Genome` is the output personal genome in FASTA format. `ID` is the in
 
 **Step 2**: 2)	Genomic features extraction
 
-Use genomic large language model (e.g., [Enformer](https://www.nature.com/articles/s41592-021-01252-x)) to extract the genomic features, including gene expression, chromatin accessibility, ChIP-seq and histone modification signals across a diverse panel of cell lines and tissues, for each maternal and paternal sequence.
+Use genomic large language model (LLM) (e.g., [Enformer](https://www.nature.com/articles/s41592-021-01252-x)) to extract the genomic features, including gene expression, chromatin accessibility, ChIP-seq and histone modification signals across a diverse panel of cell lines and tissues, for each maternal and paternal sequence.
+
+Obtaining the genomic LLM features using
+```shell
+python3 get_enformer_feats.py <chrom> <start> <end> <parent> <fasta_path> <save_path>
+[chrom] - chromosome ID (e.g., 1 to 22)
+[start] - start position
+[end] - end position
+[parent] - paternal or maternal
+[fasta_path] - path to the personal genome FASTA file in the last step
+[save_path] - path to save the genomic LLM features (end with .hdf5)
+```
+Note that the first three parameters `chrom`,`start`,and `end` can be obtained from the LD list in both `breast` or `diabetes` folder. This program also needs to be run multiple times in order to get the genomic LLM features for all the individuals.
+
 
 
 
