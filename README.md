@@ -20,7 +20,16 @@ We provide detailed step-by-step instructions for running Epi-PRS.
 
 **Step 1**: Personal genome construction
 
-Given the variant call format (VCF) file that contains the genetics profile of all individuals, we first use Vcftools to remove all the indels and only keep the SNPs. Second, we use the reference-free Beagle software for phasing genotypes. Third, we use a personal genome construction tool vcf2diploid to obtain the paternal and maternal personal genome for each individual.
+Given the variant call format (VCF) file that contains the genetics profile of all individuals, we first use [VCFtools](https://vcftools.sourceforge.net/) to remove all the indels and only keep the SNPs. Second, we use the reference-free [Beagle software](https://faculty.washington.edu/browning/beagle/beagle.html#download) for phasing genotypes. Third, we use a personal genome construction tool [vcf2diploid](https://github.com/abyzovlab/vcf2diploid) to obtain the paternal and maternal personal genome for each individual.
+
+Phasing genotypes using 
+
+```shell
+java -jar beagle.22Jul22.46e.jar gt=<Genotype> out=<Haplotype> map=plink.$3.GRCh37.map
+```
+where `beagle.22Jul22.46e.jar` can be downloaded from [here](https://faculty.washington.edu/browning/beagle/beagle.22Jul22.46e.jar). Both genotype and haplotype are in `.vcf` format.
+
+
 
 
 
