@@ -1,6 +1,10 @@
 # Epi-PRS
 We present Epi-PRS, a polygenic prediction method that leverages genomic large language models to transform personal sequences to personal genomic and epigenomic features for disease risk modeling.
 
+<p align="center">
+  <img src="https://github.com/SUwonglab/Epi-PRS/blob/main/Epi-PRS.png" />
+</p>
+
 # Environment
 - Python=3.9.0
 - TensorFlow == 2.8.0
@@ -18,6 +22,10 @@ Installation has been tested in a Linux platform.
 
 # Instructions
 We provide detailed step-by-step instructions for running Epi-PRS.
+
+<p align="center">
+  <img src="https://github.com/SUwonglab/Epi-PRS/blob/main/procedure.png" />
+</p>
 
 **Step 1**: Personal Genome Construction
 
