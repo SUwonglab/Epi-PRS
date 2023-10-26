@@ -68,6 +68,10 @@ python3 risk_prediction.py <PATH> <pheno> <chrom> <start> <end>
 ```
 We applied a dimension reduction using PCA for each 128 bp bin and only kept 5 PCs, then the PCs are pooled for all bins and fed to a logistic regression for predicting the phenotype.
 
+Feel free to contact `wanwen@stanford.edu` if you have any problem in running Epi-PRS.
+
+# License
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
 
 
