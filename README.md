@@ -34,11 +34,13 @@ Constructing personal genome using
 ```shell
 java -jar vcf2diploid.jar -outDir <Per_Genome>  -id <ID>  -chr <Ref_Genome> -vcf <Haplotype>
 ```
-where `Per_Genome` is the output personal genome in FASTA format. `ID` is the sample ID from the vcf file. `Ref_Genome` is the reference genome (e.g., chr4.fa). `Haplotype` is the haplotype file (.vcf) from the last step.
+where `Per_Genome` is the output personal genome in FASTA format. `ID` is the individual ID from the vcf file. `Ref_Genome` is the reference genome (e.g., chr4.fa). `Haplotype` is the haplotype file (.vcf) from the last step. Note that this command needs to be run multiple times to extract the personal genome for all the individuals. For a given LD, you only need to construct the personal genome for the corresponding chromosome.
 
 **Step 2**: 2)	Genomic features extraction
 
 Use genomic large language model (e.g., [Enformer](https://www.nature.com/articles/s41592-021-01252-x)) to extract the genomic features, including gene expression, chromatin accessibility, ChIP-seq and histone modification signals across a diverse panel of cell lines and tissues, for each maternal and paternal sequence.
+
+
 
 
 
