@@ -29,6 +29,13 @@ java -jar beagle.22Jul22.46e.jar gt=<Genotype> out=<Haplotype> map=plink.$3.GRCh
 ```
 where `beagle.22Jul22.46e.jar` can be downloaded from [here](https://faculty.washington.edu/browning/beagle/beagle.22Jul22.46e.jar). Both genotype and haplotype are in `.vcf` format.
 
+Constructing personal genome using
+
+```shell
+java -jar vcf2diploid.jar -outDir <Per_Genome>  -id <ID>  -chr <Ref_Genome> -vcf <Haplotype>
+```
+where `Per_Genome` is the output personal genome in FASTA format. `ID` is the sample ID from the vcf file. `Ref_Genome` is the reference genome (e.g., chr4.fa). `Haplotype` is the haplotype file (.vcf) from the last step.
+
 
 
 
