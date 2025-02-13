@@ -28,7 +28,6 @@ def seq_to_mat(seq):
     return mat
 
 def main():
-    chr_id, start, end 
     center = (start+end) // 2
     nb_regions = math.ceil((end-start-interval)/(2*interval))
     genome = Fasta(fasta_path)
@@ -40,8 +39,8 @@ def main():
         enformer_feats.append(enformer_model.predict_on_batch(onehot_mat)['human'])
     enformer_feats = np.squeeze(np.stack(enformer_feats))
     enformer_feats = enformer_feats.astype(np.float16)
-    print(each, enformer_feats.shape)
-    f_out = h5py.File(save_file,'w')
+    # print(each, enformer_feats.shape)
+    f_out = h5py.File(save_path,'w')
     _, nb_bins, _ = enformer_feats.shape
     for i in range(nb_bins):
         f_out.create_dataset('bin_%d'%i, data=enformer_feats[:,i,:], dtype='float32')
