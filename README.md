@@ -16,9 +16,9 @@ We present Epi-PRS, a polygenic prediction method that leverages genomic large l
 # Installation
 Epi-PRS can be downloaded by
 ```shell
-git clone https://github.com/kimmo1019/hicGAN
+git clone https://github.com/SUwonglab/Epi-PRS
 ```
-Installation has been tested in a Linux platform.
+For installation of [pyfasta](https://github.com/brentp/pyfasta) on python3, please see [here](https://github.com/SUwonglab/Epi-PRS/issues/2).
 
 # Instructions
 We provide detailed step-by-step instructions for running Epi-PRS.
